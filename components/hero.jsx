@@ -9,26 +9,23 @@ const HeroSection = () => {
 
     const imageRef = useRef(null);
 
-    useEffect(() => {
+  useEffect(() => {
     const imageElement = imageRef.current;
 
     const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        const scrollThreshold = 100;
+      const scrollPosition = window.scrollY;
+      const scrollThreshold = 100;
 
-        if (scrollPosition > scrollThreshold) {
-            imageElement.classList.add('scrolled');
-        } else {
-            imageElement.classList.remove('scrolled');
-        }
+      if (scrollPosition > scrollThreshold) {
+        imageElement.classList.add("scrolled");
+      } else {
+        imageElement.classList.remove("scrolled");
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-        window.removeEventListener("scroll", handleScroll);
-    };
-}, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
 
     return (
