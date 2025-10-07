@@ -13,7 +13,7 @@ const Header = async () => {
         <header className='fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60'>
 
             <nav className='container mx-auto flex px-4 h-16 items-center justify-between'>
-                <Link href='/' >
+                <Link href='/onboarding'>
                     <Image src="/logo.png" alt="Logo" width={200} height={60}
 
                         className="h-12 py-1 w-auto object-contain" />
@@ -21,7 +21,7 @@ const Header = async () => {
 
                 <div className='flex items-center space-x-2 md:space-x-4'>
                     <SignedIn>
-                        <Link href={"/dashboard"}>
+                        <Link href="/dashboard">
                             <Button variant = "outline">
                                 <LayoutDashboard className='h-4 w-4 ' />
                                 <span className='hidden md:block'>
@@ -65,13 +65,13 @@ const Header = async () => {
                     </SignedIn>
 
                     <SignedOut>
-                        <SignInButton>
+                        <SignInButton afterSignInUrl="/onboarding">
                             <Button variant="outline">Sign In</Button>
                         </SignInButton>
                     </SignedOut>
 
                     <SignedIn>
-                        <UserButton 
+                        <UserButton
                         appearance={{
                             elements: {
                                 avatarBox: "w-16 h-16",
