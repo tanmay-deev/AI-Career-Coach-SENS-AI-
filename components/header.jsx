@@ -65,7 +65,7 @@ const Header = async () => {
                     </SignedIn>
 
                     <SignedOut>
-                        <SignInButton afterSignInUrl="/onboarding">
+                        <SignInButton>
                             <Button variant="outline">Sign In</Button>
                         </SignInButton>
                     </SignedOut>
